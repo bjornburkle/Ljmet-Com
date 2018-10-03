@@ -303,15 +303,12 @@ int main (int argc, char* argv[]) {
         // run producers
         factory->RunAllProducers(event, theSelector);
         
-        
-        
         // event selection
         pat::strbitset ret = theSelector->getBitTemplate();
         bool passed = (*theSelector)( event, ret );
         
         
         if ( passed ) {
-            
             //
             //_____ Run all variable calculators now ___________________
             //

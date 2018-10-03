@@ -1262,6 +1262,7 @@ bool singleLepEventSelector::operator()( edm::EventBase const & event, pat::strb
 
         }
         if (mbPar["debug"]) std::cout<<"finish btag cuts..."<<std::endl;
+
     
         passCut(ret, "All cuts");
         break;
@@ -1270,7 +1271,7 @@ bool singleLepEventSelector::operator()( edm::EventBase const & event, pat::strb
 
 
     bFirstEntry = false;
-    
+
     return (bool)ret;
   
     setIgnored(ret);
